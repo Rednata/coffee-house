@@ -1,5 +1,5 @@
-import './style.scss';
 import 'normalize.css';
+import './style.scss';
 
 console.log(111);
 

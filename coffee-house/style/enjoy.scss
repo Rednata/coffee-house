@@ -1,0 +1,40 @@
+.enjoy {
+  padding-top: 21px;
+
+  &__container {
+    background-image: url("../public/img/img-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+  }
+
+  &__content {
+    padding: 100px;
+    width: 750px;
+  }
+
+  &__title {
+    font-size: 72px;
+    font-weight: 600;
+    color: $text-light;
+    line-height: 75px;
+    margin-bottom: 41px;
+  }
+
+  &__color {
+    font-style: italic;
+    color: $text-accent;
+  }
+
+  &__text {
+    color: $text-light;
+    margin-bottom: 42px;
+    line-height: 24px;
+  }
+
+  &__btn {
+  }
+}
+.container {
+}
