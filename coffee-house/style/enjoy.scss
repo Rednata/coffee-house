@@ -1,8 +1,10 @@
 .enjoy {
   padding-top: 21px;
+  margin-bottom: 100px;
 
   &__container {
-    background-image: url("../public/img/img-hero.jpg");
+    background-image: url("/img/img-hero.jpg");
+    // background-image: url("../public/img/img-hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
