@@ -1,0 +1,52 @@
+.about {
+  margin-bottom: 100px;
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__img-wrap {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__column {    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 660px;
+  }
+
+  &__item {
+    overflow: hidden;
+    border-radius: 20px;
+
+    &_1 {
+      height: 590px;
+    }
+    &_2 {
+      height: 430px;
+    }
+    &_3 {
+      height: 430px;
+    }
+    &_4 {
+      height: 590px;
+    }
+  }
+
+  &__img {
+    border-radius: 20px;
+    object-fit: cover;    
+
+    &_1, 
+    &_4 {
+      transform: scale(1.1) translateY(-30px);
+    }
+    &_2,
+    &_3 {
+      transform: scale(1.1) translateY(-105px);
+    }
+  }
+
+}
+
