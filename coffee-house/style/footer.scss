@@ -1,0 +1,90 @@
+.footer {
+  margin-bottom: 40px;
+  width: 100%;
+  color: $text-light;
+
+  &__container {
+    display: flex;
+    background-color: $back-container;
+    border-radius: 40px;
+    gap: 100px;
+    padding: 100px;
+    padding-top: 97px;
+    
+  }
+
+  &__title-social {
+    flex-basis: 50%;
+  }
+
+  &__title {
+  }
+
+  &__social-list {
+    display: flex;    
+    gap: 12px;
+  }
+
+  &__social-item {
+    
+  }
+
+  &__social-link {
+    border: 1px solid $border-light;
+    border-radius: 50%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;        
+  }
+
+
+  &__contacts {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__contacts-title {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__contacts-item {
+    display: flex;
+    gap: 8px;
+    &::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;      
+    }
+
+    &_pin::before{ 
+      background-image: url("/img/pin-alt.svg");
+    }
+    &_phone::before{ 
+      background-image: url("/img/phone.svg");
+    }
+    &_clock::before{ 
+      background-image: url("/img/clock.svg");
+    }
+  }
+
+  &__contacts-link {
+  }
+}
+
+.social {
+
+  &__link {
+  }
+}
