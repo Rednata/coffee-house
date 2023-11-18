@@ -9,42 +9,44 @@
   }
 
   &__item {
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $text-dark;
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    &:hover::after {
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
   &__item:last-child {
     margin-right: 0;
     margin-left: auto;
-    display: flex;
+    // display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 600;
-    // border-bottom: 1px solid red;
+    font-weight: 600;    
+  }
 
-
-    &::after {
+  &__item:last-child &__link {    
+    display: flex;
+    gap: 8px;
+    
+    &:after {
       content: '';
       display: block;
-      background-image: url('/img/coffee-cup.svg');
       width: 20px;
       height: 20px;      
+      background-image: url('/img/coffee-cup.svg');      
       background-repeat: no-repeat;
       background-position: center;
-
     }
   }
-
-  &__link:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: $text-dark;
-    transform: scale(0);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &__link:hover::after {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-  }
 }
+
