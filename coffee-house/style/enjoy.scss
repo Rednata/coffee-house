@@ -36,6 +36,7 @@
   }
 
   &__link {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,17 +45,23 @@
     height: 64px;
     font-weight: 600;
     background-color: $back-body;
-    // padding: 20px 78px;
     border-radius: 100px;    
 
-    &:hover:after {
+    &:after {
+      position: absolute;
       content: '';
       display: block;
+      right: 27%;
       width: 20px;
-      height: 20px;
-      // width: 50px;
-      // height: 2px;
+      height: 20px;      
       background-image: url("../public/img/coffee-cup.svg");
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
     }
   }
 }

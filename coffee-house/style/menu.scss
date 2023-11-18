@@ -5,6 +5,15 @@
     margin-bottom: 20px;    
   }
 
+  &__nav-menu>.nav__link {
+    cursor: default;    
+    
+  }
+
+  &__nav-menu:after {
+    transform: scale(1);
+  }
+
   &__title {
     max-width: 60%;
     margin: 0 auto;
@@ -57,6 +66,7 @@
     &_active {
       background-color: $back-container;
       color: $text-light;
+      cursor: default;
     }    
 
     &:hover {
