@@ -37,6 +37,14 @@
     justify-content: center;
     width: 60px;
     height: 60px;        
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $back-body;
+      border-color: $back-body;
+      color: $text-dark;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
   }
 
 
@@ -58,8 +66,9 @@
     gap: 20px;
   }
 
-  &__contacts-item {
+  &__contacts-link {
     display: flex;
+    width: max-content;
     gap: 8px;
     &::before {
       content: '';
@@ -67,24 +76,50 @@
       width: 20px;
       height: 20px;      
     }
+    &_pin {
+      position: relative;
+      &::before{ 
+        background-image: url("/img/pin-alt.svg");
+      }
+    }
+    
+    &_phone {
+      position: relative;
 
-    &_pin::before{ 
-      background-image: url("/img/pin-alt.svg");
+      &::before{ 
+        background-image: url("/img/phone.svg");
+      }
     }
-    &_phone::before{ 
-      background-image: url("/img/phone.svg");
+
+    &_pin:after,
+    &_phone:after {
+      position: absolute;
+      bottom: -4px;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $text-light;        
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
     }
+
+    &_pin:hover:after,
+    &_phone:hover:after {
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+    }
+
     &_clock::before{ 
       background-image: url("/img/clock.svg");
     }
   }
 
-  &__contacts-link {
-  }
 }
 
 .social {
 
   &__link {
+  
   }
 }

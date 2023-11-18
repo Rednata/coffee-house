@@ -5,4 +5,11 @@
   border-radius: 100px;
   color: $text-dark;
   font-weight: 600;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $back-container;
+    color: $text-light;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
 }

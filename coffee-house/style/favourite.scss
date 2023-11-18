@@ -49,7 +49,13 @@
     height: 60px;
     border: 1px solid $border-dark;
     border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
+    &:hover {
+      background-color: $back-container;
+      color: $text-light;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
 
     &_left {
     }

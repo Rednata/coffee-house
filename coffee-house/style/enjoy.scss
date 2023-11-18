@@ -35,8 +35,26 @@
     line-height: 24px;
   }
 
-  &__btn {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 200px;
+    height: 64px;
+    font-weight: 600;
+    background-color: $back-body;
+    // padding: 20px 78px;
+    border-radius: 100px;    
+
+    &:hover:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      // width: 50px;
+      // height: 2px;
+      background-image: url("../public/img/coffee-cup.svg");
+    }
   }
-}
-.container {
 }
