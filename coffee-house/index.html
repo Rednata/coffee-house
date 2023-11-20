@@ -14,7 +14,7 @@
     <header class="header">
       <div class="container header__container">
         <div class="logo header__logo">   
-          <a href="/">
+          <a href="./">
             <img src="img/logo.svg" alt="Логотип кофейни Resourse">                  
           </a>                     
         </div>
@@ -36,7 +36,14 @@
               <a class="nav__link" href="./menu.html">Menu</a>
             </li>
           </ul>
-        </nav>      
+        </nav>  
+        <button class="header__burger burger">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" stroke="#665F55"/>
+            <path d="M14 18H30" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 26H30" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>    
       </div>
       
     </header>
@@ -47,7 +54,7 @@
             <div class="enjoy__content">
               <h1 class="enjoy__title">
                 <span class="enjoy__color">Enjoy</span>
-                premium coffee at our charming cafe</h1>
+                premium coffee&nbsp;at&nbsp;our charming&nbsp;cafe</h1>
               <p class="enjoy__text">
                 With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage
               </p>
@@ -56,7 +63,7 @@
           </div>                  
       </section>
 
-      <section class="favourite container" id="favorite">
+      <section class="visually-hidden favourite container" id="favorite">
         <h2 class="title favourite__title">
           Choose your <span class="title__color">favorite </span>coffee
         </h2>
@@ -114,7 +121,7 @@
         </div>
       </section>
 
-      <section class="about container" id="about">
+      <section class="visually-hidden about container" id="about">
         <h2 class="title about__title">
           Resource is
             <span class="title__color">the perfect and cozy place</span>
@@ -141,7 +148,7 @@
         </div>
       </section>
 
-      <section class="app container" id="mobileApp">
+      <section class="visually-hidden app container" id="mobileApp">
         <div class="app__content">
           <h2 class="title app__title">
             <span class="title__color">Download</span>
@@ -179,9 +186,66 @@
         </div>        
       </section>
 
+      <section class="visually-hidden modal">
+        <div class="modal__overlay">
+          <div class="modal__wrap">
+            <img class="modal__img" src="./public/img/coffee-1.jpg" alt="">
+            <div class="modal__content">
+              <h2 class="modal__title">Irish coffee</h2>
+              <p class="modal__descript">
+                Fragrant black coffee with Jameson Irish whiskey and whipped milk
+              </p>
+
+              <div class="modal__btn-wrap">
+                <p class="modal__btn-wrap-title">
+                  Size
+                </p>
+                <ul class="modal__list">
+                  <li class="modal__item">
+                    <button class="button-check button-check_active modal__btn modal__btn_S">200 ml</button>
+                  </li>
+                  <li class="modal__item">
+                    <button class="button-check modal__btn modal__btn_M">300 ml</button>
+                  </li>
+                  <li class="modal__item">
+                    <button class="button-check modal__btn modal__btn_L">400 ml</button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="modal__btn-wrap">
+                <p class="modal__btn-wrap-title">
+                  Additives
+                </p>
+                <ul class="modal__list">
+                  <li class="modal__item">
+                    <button class="button-check modal__btn modal__btn_1">Sugar</button>
+                  </li>
+                  <li class="modal__item">
+                    <button class="button-check modal__btn modal__btn_2">Cinnamon</button>
+                  </li>
+                  <li class="modal__item">
+                    <button class="button-check modal__btn modal__btn_3">Syrup</button>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="modal__total-wrap">
+                <span class="modal__total-title">Total:</span>                
+                <span class="modal__total-price">$7.00</span>
+              </div>
+              <p class="modal__note">
+                The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+              </p>
+              <button class="button modal__btn-close">Close</button> 
+            </div>              
+          </div>          
+        </div>        
+      </section>
+
     </main>
 
-    <footer class="footer container" id="contact">
+    <footer class="visually-hidden footer container" id="contact">
       <div class="footer__container">
         <div class="footer__title-social">
           <h2 class="title footer__title">

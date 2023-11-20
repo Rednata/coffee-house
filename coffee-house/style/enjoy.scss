@@ -12,8 +12,25 @@
   }
 
   &__content {
-    padding: 100px;
-    width: 750px;
+    padding: 100px 0 100px 100px;
+    width: 530px;
+    box-sizing: content-box;
+
+    @include tablet1024 {
+      padding-left: 60px;
+    }
+    @include tablet720 {
+      width: 80%;
+      box-sizing: border-box;
+      padding: 60px 16px;
+    }
+    @include mobile580 {
+      width: 100%;
+    }
+    @include mobile370 {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   &__title {
@@ -22,6 +39,20 @@
     color: $text-light;
     line-height: 75px;
     margin-bottom: 42px;
+
+    @include tablet720 {
+      font-size: 56px;
+      line-height: 62px;
+    }
+    @include mobile580 {
+      font-size: 42px;
+      line-height: 48px;
+      margin-bottom: 40px;
+    }
+    @include mobile370 {
+      font-size: 35px;
+      line-height: 39px;
+    }
   }
 
   &__color {
@@ -33,6 +64,10 @@
     color: $text-light;
     margin-bottom: 42px;
     line-height: 24px;
+
+    @include mobile580 {
+      margin-bottom: 40px;
+    }
   }
 
   &__link {
@@ -63,5 +98,10 @@
       opacity: 1;
       transition: opacity 0.3s ease-in-out;
     }
+
+    @include mobile370 {
+      height: 48px;
+    }
   }
+
 }

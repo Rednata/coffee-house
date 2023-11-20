@@ -1,0 +1,122 @@
+.modal {
+  &__overlay {
+    // position: fixed;
+    inset: 0 0 0 0;
+    border: 1px solid red;
+    background-color: $back-backdrop;
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 20px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 40px;
+    background-color: $back-body;
+  }
+
+  &__img {
+    border-radius: 40px;
+    align-self: flex-start;
+  }
+
+  &__content {
+
+  }
+
+  &__title {
+    font-size: 24px;    
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  &__descript {
+    margin-bottom: 20px;
+  }
+
+  &__btn-wrap {
+
+  }
+
+  &__btn-wrap-title {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+  }
+
+  &__btn {
+ 
+    &_S:before {
+      @include beforeBtn('S');
+    }
+  
+    &_M:before {
+      @include beforeBtn('M');      
+    }
+    &_L:before {
+      @include beforeBtn('L');      
+    }
+  
+    &_1:before {
+      @include beforeBtn('1');      
+    }
+    &_2:before {
+      @include beforeBtn('2');      
+    }
+    &_3:before {
+      @include beforeBtn('3');      
+    }
+  }
+
+  &__total-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;    
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+
+  &__note {    
+    // position: relative;
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    border-top: 1px solid $border-light;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;    
+    border: 1px solid red;
+
+    &:before {      
+      // position: absolute;
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-image: url("../public/img/info.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 1px solid red;
+      // margin-right: 9px;
+    }
+  }
+
+  &__btn-close {
+    width: 100%;
+    height: 44px;
+    min-height: 0;
+    border: 1px solid $border-dark;
+  }
+}

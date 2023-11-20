@@ -1,6 +1,12 @@
 .header {  
   padding-top: 19px;
 
+  @include tablet1024 {    
+    .nav {
+      display: none; 
+    }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -12,7 +18,16 @@
 
   &__nav {
   }
+
+  &__burger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    // background-image: url("../public/img/button-icon-burger.svg");
+
+    @include tablet1024 {
+      display: block;
+    }
+  }
 }
 
-.logo {
-}

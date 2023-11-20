@@ -29,30 +29,7 @@
     
   }
 
-  &__button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-radius: 100px;
-    border: 1px solid $border-light;
-    padding: 8px 16px 8px 8px;
-    font-weight: 600;
-    color: $text-dark;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-
-    &:before {
-      content: '';
-      display: block;
-      width: 30px;
-      height: 30px;
-      background-color: $border-light;
-      border-radius: 50%;
-      background-position: center;
-      background-size: 16px;
-      background-repeat: no-repeat;
-      padding: 7px;      
-    }
-
+  &__button {    
     &_coffee:before {
       background-image: url("../public/img/coffeeIcon.png");
     }
@@ -64,15 +41,15 @@
     }
 
     &_active {
-      background-color: $back-container;
-      color: $text-light;
-      cursor: default;
+      // background-color: $back-container;
+      // color: $text-light;
+      // cursor: default;
     }    
 
     &:hover {
-      background-color: $back-container;
-      color: $text-light;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      // background-color: $back-container;
+      // color: $text-light;
+      // transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
   }
 

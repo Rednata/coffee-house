@@ -100,27 +100,31 @@ iframe {
   padding: 0 40px;
   margin: 0 auto;
 
-  @media (min-width: 1120px) {
+// @include tablet1024 {
+//   padding: 0 16px;
+// }
 
-  }
-
-  @media (min-width: 820px) {
-
-  }
+@include tablet720 {
+  padding: 0 16px;
+}
 
   @media (min-width: 580px) {
 
   }
 }
 
-@media (min-width: 1120px) {
+
+@include tablet1024 {
+
+}
+@include tablet720 {
 
 }
 
-@media (min-width: 820px) {
-
+@include mobile580 {
+  
 }
 
-@media (min-width: 580px) {
-
+@include mobile370 {
+  
 }
