@@ -4,6 +4,16 @@
   line-height: 75px;
   margin-bottom: 40px;
 
+  @include tablet720 {
+    font-size: 52px;
+    line-height: 58px;
+  }
+
+  @include mobile580 {    
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   &__color {
     color: $text-accent;
     font-style: italic;

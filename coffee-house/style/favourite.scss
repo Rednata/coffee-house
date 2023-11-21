@@ -4,6 +4,7 @@
   &__title {
     text-align: center;
 
+
   }
 
   &__wrap {
@@ -14,28 +15,13 @@
     display: flex;
     max-width: 480px;
     margin: 0 auto;
+    margin-bottom: 23px;
     overflow: hidden;
   }
 
   &__item {
     width: 100%;
     flex-shrink: 0;
-  }
-
-  &__bar {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-  }
-
-  &__position {
-    width: 40px;
-    height: 4px;
-    background-color: $border-light;
-
-    &_active {
-      background-color: $border-dark
-    }
   }
 
   &__button {
@@ -51,6 +37,10 @@
     border-radius: 50%;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
+    @include mobile580 {
+      display: none;
+    }
+
     &:hover {
       background-color: $back-container;
       color: $text-light;
@@ -62,6 +52,26 @@
 
     &_right {
       right: 0;
+    }
+  }
+}
+
+.bar {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  &__button {
+    box-sizing: content-box;
+    width: 40px;
+    height: 4px;
+    background-color: $border-light;    
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    background-clip: padding-box;
+
+    &_active {
+      background-color: $border-dark
     }
   }
 }

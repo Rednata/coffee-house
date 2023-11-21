@@ -19,8 +19,20 @@ $border-dark: #665F55;
   }  
 }
 
+@mixin desktop1400 {
+  @media(max-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin tablet1024 {
   @media(max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet800 {
+  @media(max-width: 800px) {
     @content;
   }
 }
