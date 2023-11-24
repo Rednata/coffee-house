@@ -9,6 +9,10 @@
   color: $text-dark;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
+  @include mobile370 {
+    padding: 6px;
+  }
+
   &:before {
     content: '';
     display: block;
@@ -20,6 +24,11 @@
     background-size: 16px;
     background-repeat: no-repeat;
     padding: 7px;      
+
+    @include mobile370 {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &_active {

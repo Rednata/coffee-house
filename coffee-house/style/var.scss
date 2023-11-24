@@ -43,6 +43,12 @@ $border-dark: #665F55;
   }
 }
 
+@mixin tablet760 {
+  @media(max-width: 760px) {
+    @content;
+  }
+}
+
 @mixin mobile580 {
   @media(max-width: 580px) {
     @content;

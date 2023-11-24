@@ -2,7 +2,7 @@
   margin-bottom: 100px;
 
   @include tablet800 {
-    margin-bottom: 105px;
+    margin-bottom: 100px;
   }
 
   &__header {    
@@ -29,6 +29,7 @@
     }
     @include tablet800 {
       max-width: 100%;
+      margin-bottom: 40px;
     }
   }
 
@@ -38,6 +39,9 @@
     justify-content: center;    
     margin-bottom: 39px;
     
+    @include mobile580 {
+      gap: 8px;
+    }
   }
 
   &__button {    
@@ -71,6 +75,20 @@
     gap: 40px;
     max-height: 1052px;
     overflow: hidden;
+
+    @include tablet800 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include tablet720 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include tablet760 {
+      max-height: 2144px;
+    }
   }
 
   &__item {
@@ -78,15 +96,19 @@
   }
 
   &__refresh {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    border: 1px solid $border-dark;     
-    margin: 0 auto;
-    margin-top: 40px;   
+    display: none;        
+
+    @include tablet1024 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border: 1px solid $border-dark;     
+      margin: 0 auto;
+      margin-top: 40px;   
+    }
   }
 }
 
