@@ -1,5 +1,6 @@
 .about {
   margin-bottom: 100px;
+
   &__title {
     margin-bottom: 40px;
   }
@@ -7,6 +8,12 @@
   &__img-wrap {
     display: flex;
     column-gap: 40px;
+
+    @include tablet1024 {
+      flex-direction: column; 
+      align-items: center;
+      gap: 40px;
+    }
   }
 
   &__column {    
@@ -14,32 +21,107 @@
     flex-direction: column;
     gap: 40px;
     width: 660px;
+    max-height: 1060px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    @include tablet800 {
+      width: 100%;
+    }      
+
+    @include tablet760 {
+
+    }
   }
 
   &__item {
     overflow: hidden;
     border-radius: 20px;
+    background-size: 110%;      
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in-out;    
+
+    &:hover {
+      background-size: 100%;
+      transition: background-size 0.5s ease-in-out;
+    }    
+    
+    @include tablet800 {
+      background-size: 105%;
+
+      &:hover {
+        background-size: 100%;
+      }    
+
+      @include tablet760 {
+        // background-size: cover;
+        background-size: 120%;
+      }
+      @include mobile580 {
+        background-size: 150%;
+
+        &:hover {
+          background-size: 140%;
+        }    
+      }
+      @include mobile420 {
+        background-size: 209%;
+
+        &:hover {
+          background-size: 199%;
+        }    
+      }
+
+    }          
 
     &_1 {
-      height: 590px;
+      background-image: url(../public/img/about-1.jpg);
+      background-position: center;
+      height: 43vw;
+
+      @include tablet1024 {
+        height: 590px;  
+      }      
     }
+
     &_2 {
-      height: 430px;
+      background-image: url(../public/img/about-2.jpg);
+      background-position:  45%;
+      height: 31vw;
+
+      @include tablet1024 {
+        display: none;
+      }
     }
+
     &_3 {
-      height: 430px;
+      background-image: url(../public/img/about-3.jpg);
+      background-position:  45%;
+      height: 31vw;      
+
+      @include tablet1024 {
+        display: none;
+      }
     }
+
     &_4 {
-      height: 590px;
+      background-image: url(../public/img/about-4.jpg);
+      background-position: center;              
+      height: 43vw;      
+
+      @include tablet1024 {
+        height: 590px;  
+      }      
     }
   }
 
   &__img {
     border-radius: 20px;
-    object-fit: cover;  
+    object-fit: contain;  
 
     &_1, 
     &_4 {
+      transform: scale(1.1);
       transform: scale(1.1) translateY(-30px);
       transition: transform 0.3s ease-in-out;
 
@@ -51,6 +133,7 @@
     &_2,
     &_3 {
       transform: scale(1.1) translateY(-105px);
+      // transform: scale(1.1);
       transition: transform 0.3s ease-in-out;
       
     &:hover {      
