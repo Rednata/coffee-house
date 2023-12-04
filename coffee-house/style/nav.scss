@@ -1,6 +1,10 @@
 
 .nav {
   width: 65.8%;
+
+  @include tablet1024 {
+    width: 100%;    
+  }
   
   &__list {
     display: flex;
@@ -18,11 +22,14 @@
       transform: scale(0);
       transition: transform 0.3s ease-in-out;
     }
-  
-    &:hover::after {
-      transform: scale(1);
-      transition: transform 0.3s ease-in-out;
+
+    @include hover {
+      &:hover::after {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+      }  
     }
+    
   }
 
   &__item:last-child {

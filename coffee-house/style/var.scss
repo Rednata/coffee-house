@@ -19,6 +19,12 @@ $border-dark: #665F55;
   }  
 }
 
+@mixin hover {
+  @media (hover: hover) {
+    @content
+  }
+}
+
 @mixin desktop1400 {
   @media(max-width: 1400px) {
     @content;
@@ -33,6 +39,12 @@ $border-dark: #665F55;
 
 @mixin tablet800 {
   @media(max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin burger768 {
+  @media(max-width: 768px) {
     @content;
   }
 }

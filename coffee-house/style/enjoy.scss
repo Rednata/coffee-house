@@ -4,7 +4,6 @@
 
   &__container {
     background-image: url("/img/img-hero.jpg");
-    // background-image: url("../public/img/img-hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -89,14 +88,16 @@
       right: 27%;
       width: 20px;
       height: 20px;      
-      background-image: url("../public/img/coffee-cup.svg");
+      background-image: url("../img/coffee-cup.svg");
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
 
-    &:hover:after {
-      opacity: 1;
-      transition: opacity 0.3s ease-in-out;
+    @include hover {
+      &:hover:after {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
     }
 
     @include mobile370 {

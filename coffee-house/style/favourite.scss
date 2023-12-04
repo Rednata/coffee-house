@@ -41,12 +41,14 @@
       display: none;
     }
 
-    &:hover {
-      background-color: $back-container;
-      color: $text-light;
-      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    @include hover {
+      &:hover {
+        background-color: $back-container;
+        color: $text-light;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
     }
-
+    
     &_left {
     }
 
