@@ -73,8 +73,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    max-height: 1052px;
-    overflow: hidden;
+    // max-height: 1052px;
+    // overflow: hidden;
 
     @include tablet800 {
       padding-left: 10px;
@@ -87,7 +87,7 @@
     }
 
     @include tablet760 {
-      max-height: 2144px;
+      // max-height: 2144px;
     }
   }
 
@@ -96,17 +96,10 @@
   }
 
   &__refresh {
-    display: none;  
-    
-    @include hover {
-      &:hover {
-        background-color: $back-container;
-        color: $text-light;
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-      }
-    }
-    
-    @include tablet1024 {
+    visibility: hidden;
+
+    @include burger768 {
+      visibility: visible;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -117,7 +110,33 @@
       margin: 0 auto;
       margin-top: 40px;   
       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      &_hidden {
+        visibility: hidden;
+      }
+
+      &_show {
+        // display: flex;
+      }
     }
+    
+
+
+
+    // &_show{    
+    //   @include hover {
+    //     &:hover {
+    //       background-color: $back-container;
+    //       color: $text-light;
+    //       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    //     }
+    //   }
+      
+      // @include tablet1024 {
+      //   display: flex;
+      
+      // }
+    // }
   }
 }
 

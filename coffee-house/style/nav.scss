@@ -6,15 +6,19 @@
     width: 100%;    
   }
 
-  @include burger768 {    
+  @include burger768 {        
+      right: -200%;
       position: fixed;
       z-index: 5;
       top: 0;
-      inset: 0;
+      bottom: 0;
+      // inset: 0;
       padding-top: 168px;  
       background-color: $text-light;
-      transform: translateX(150%);
-      transition: transform 0.7s ease-in-out;
+      // transform: translateX(150%);
+      // transition: transform 0.7s ease-in-out;
+      transition: right 1s ease-in-out;
+
 
     &__list {
       flex-direction: column;
@@ -36,7 +40,6 @@
         }
       }
     }
-
   }
   
   &__list {
@@ -86,8 +89,6 @@
 }
 
 .nav_active-burger {
-  inset: 0;
-  // left: 200px;
-  transform: translateX(0);
-  transition: transform 1s ease-in-out;
+  right: 0;
+  transition: right 1s ease-in-out;
 }
