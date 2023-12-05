@@ -13,6 +13,7 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
+  // border: 1px solid black;
   min-width: 320px;
   min-height: 100vh;
   font-family: Inter, Arial, sans-serif;
@@ -28,6 +29,10 @@ body {
   background-color: $back-body;
   display: flex;
   flex-direction: column;
+}
+
+.body_hidden {
+  overflow-y: hidden;
 }
 
 main {

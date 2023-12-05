@@ -1,17 +1,32 @@
 .header {  
   padding-top: 19px;
+  // border: 1px solid red;
+  min-height: 60px;
 
   @include burger768 {    
-    .nav {
-      display: none; 
+    &__nav {
+      // display: none; 
+      transform: translateX(150%);
+      
     }
+
+    // &_burger {
+    //   width: 100%;
+    //   position: fixed;
+    //   z-index: 10;
+    //   margin-bottom: 100px;
+    // }
   }
 
   &__container {
+    overflow-x: hidden;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4.4vw;
+    gap: 3vw;
+    // border: 1px solid blue;
+    min-height: 60px;
   }
 
   &__logo {
@@ -22,12 +37,64 @@
 
   &__burger {
     display: none;
-    width: 44px;
-    height: 44px;
+  
 
     @include burger768 {
-      display: block;
-    }
+      display: flex;
+    }    
   }
 }
 
+.burger {
+  position: fixed;
+  z-index: 10;
+  right: 40px;
+  top: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid $text-dark;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet720 {
+    right: 16px;
+  }
+  
+  &_active {
+    gap: 0;
+  }
+
+  &_active &__dash:first-child {    
+    transform: translateY(1px) rotate(45deg);
+    transition: transform 0.5s ease-in-out;
+  }
+  &_active &__dash:last-child {    
+    transform: translateY(-1px) rotate(-45deg);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__dash {
+    height: 2px;
+    width: 16px;
+    background-color: $text-dark;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.logo {
+  width: 100px;
+  height: 60px;
+
+  &__img {
+    max-width: none;
+  }
+}
+
+.logo_active-burger {
+  position: fixed;
+  z-index: 10;
+  // top: 18px;
+}
