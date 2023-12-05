@@ -39,6 +39,13 @@ export const menuCategoriesControl = () => {
 
   btnsType.forEach(btn => {
     btn.addEventListener('click', () => {
+
+      btnsType.forEach(btn => {
+        btn.classList.remove('button-check_active');
+        btn.disabled = false;
+      })
+      btn.classList.add('button-check_active')
+      btn.disabled = true;
       list.innerHTML = '';
       getData(btn.textContent.toLowerCase());
     });
