@@ -8,8 +8,8 @@ console.log(111);
 
 const init = async () => {
   burgerControl();
-  const data = await getData('coffee');
-  menuCategoriesControl(data);
+  const [types] = await getData('coffee');
+  menuCategoriesControl(types);
   modalControl();
 };
 
