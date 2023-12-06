@@ -16,8 +16,10 @@ const hiddenModal = () => {
   document.body.classList.remove('body_hidden');
 }
 
-const renderModal = ({img, title, descript, price}) => {
-  console.log('title: ', title);
+const renderModal = (type, itemData, sizeArray, addArray) => {
+  console.log('addArray: ', addArray);
+  console.log('sizeArray: ', sizeArray);
+  const {img, title, descript, price} = itemData;
   const image = modal.querySelector('.modal__img');
   image.src = img;
   const modalTitle = modal.querySelector('.modal__title');
@@ -26,6 +28,35 @@ const renderModal = ({img, title, descript, price}) => {
   modalDescript.textContent = descript;
   const totalPrice = modal.querySelector('.modal__total-price');
   totalPrice.textContent = price;
+
+  const modalListBtn = document.querySelectorAll('.modal__list');
+  modalListBtn[0].innerHTML = '';
+  modalListBtn[1].innerHTML = '';
+  modalListBtn[0].insertAdjacentHTML('afterbegin', 
+  `
+    <li class="modal__item">
+      <button class="button-check button-check_active modal__btn modal__btn_S">${sizeArray[0]}</button>
+    </li>
+    <li class="modal__item">
+      <button class="button-check modal__btn modal__btn_M">${sizeArray[1]}</button>
+    </li>
+    <li class="modal__item">
+      <button class="button-check modal__btn modal__btn_L">${sizeArray[2]}</button>
+    </li>
+  `);
+
+  modalListBtn[1].insertAdjacentHTML('afterbegin',
+  `
+    <li class="modal__item">
+      <button class="button-check modal__btn modal__btn_1">${addArray[0]}</button>
+    </li>
+    <li class="modal__item">
+      <button class="button-check modal__btn modal__btn_2">${addArray[1]}</button>
+    </li>
+    <li class="modal__item">
+      <button class="button-check modal__btn modal__btn_3">${addArray[2]}</button>
+    </li>
+  `);
 };
 
 export const modalControl = () => {
@@ -37,9 +68,9 @@ export const modalControl = () => {
       showModal()      
       const title = target.closest('.menu-card').querySelector('.menu-card__title').textContent;      
 
-      const [types, itemData] = await getData(type, title);      
+      const {itemData, sizeArray, addArray} = await getData(type, title);      
 
-      renderModal(itemData);
+      renderModal(type, itemData, sizeArray, addArray);
     }    
   });
 

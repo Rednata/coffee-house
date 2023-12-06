@@ -23,12 +23,16 @@ const createItem = ({ img, title, descript, price }) => {
 };
 
 export const getData = (type, title) => {  
+  console.log('title: ', title);
   return fetch('./data/menuCategoriesData.json')                  
     .then(response => response.json())
     .then(data => {
+      console.log('data: ', data);
       const [{ types }] = data.filter(item => item.name === type);      
-      const itemData = types.find(item => item.title === title);
-      return [types, itemData]
+      const itemData = types.find(item => item.title === title);            
+      const { size: sizeArray, add: addArray } = data.find(item => item.name === type);
+            
+      return { types, itemData, sizeArray, addArray };
     });
 }
 
@@ -75,7 +79,7 @@ export const menuCategoriesControl = (typesStart) => {
       btn.classList.add('button-check_active')
       btn.disabled = true;
       list.innerHTML = '';
-      const [types] = await getData(btn.textContent.toLowerCase());
+      const { types } = await getData(btn.textContent.toLowerCase());
       console.log('types: ', types);
       
       renderList(types);

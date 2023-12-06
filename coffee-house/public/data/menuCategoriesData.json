@@ -51,7 +51,9 @@
         "descript": "Fragrant black coffee with cognac and whipped cream",
         "price": "$6.50"
       }
-    ]
+    ],
+    "size": ["200 ml", "300 ml", "400 ml"],
+    "add": ["Sugar", "Cinnamon", "Syrup"]
   },
   {
     "name": "tea", 
@@ -80,7 +82,9 @@
         "descript": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
         "price": "$5.50"
       }
-    ]
+    ],
+    "size": ["200 ml", "300 ml", "400 ml"],
+    "add": ["Sugar", "Lemon", "Syrup"]
   },
   {
     "name": "dessert", 
@@ -133,23 +137,8 @@
         "descript": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
         "price": "$6.50"
       }
-    ]
+    ],
+    "size": ["50 g", "100 g", "200 g"],
+    "add": ["Berries", "Nuts", "Jam"]
   }
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

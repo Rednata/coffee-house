@@ -8,7 +8,7 @@ console.log(111);
 
 const init = async () => {
   burgerControl();
-  const [types] = await getData('coffee');
+  const { types } = await getData('coffee');
   menuCategoriesControl(types);
   modalControl();
 };
