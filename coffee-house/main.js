@@ -1,15 +1,16 @@
 import 'normalize.css';
 import { burgerControl } from './script/Burger';
-import { loadStartCategory } from './script/LoadStartCategory';
-import { menuCategoriesControl } from './script/menuCategoriesControl';
+import { getData, menuCategoriesControl } from './script/menuCategoriesControl';
+import { modalControl } from './script/ModalControl';
 import './style.scss';
 
 console.log(111);
 
-const init = () => {
+const init = async () => {
   burgerControl();
-  loadStartCategory();
-  menuCategoriesControl();
+  const data = await getData('coffee');
+  menuCategoriesControl(data);
+  modalControl();
 };
 
 init();

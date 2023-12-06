@@ -1,6 +1,5 @@
 .header {  
   padding-top: 19px;
-  // min-height: 60px;
 
   &__container {
     overflow-x: hidden;
@@ -9,7 +8,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 3vw;
-    // min-height: 60px;
   }
 
   &__logo {
@@ -39,13 +37,10 @@
 }
 
 .logo_active-burger {
-  // position: fixed;
 
-  // top: 18px;
 }
 
 .burger {
-  // position: fixed;
   z-index: 10;
   right: 40px;
   top: 30px;
@@ -67,20 +62,33 @@
   }
 
   &_active-burger &__dash:first-child {    
-    transform: translateY(1px) rotate(45deg);
-    transition: transform 0.5s ease-in-out;
+    transform: translateY(1px) rotate(45deg) ;
+    transition: transform 0.3s ease-in-out;
+    // animation: burgerAnim 1s ease-in-out;
+    
   }
   &_active-burger &__dash:last-child {    
     transform: translateY(-1px) rotate(-45deg);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    
   }
 
   &__dash {
     height: 2px;
     width: 16px;
     background-color: $text-dark;
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0) ;
+    transition: transform 0.3s ease-in-out;
+
+    // &:first-child {
+    //   background-color: tomato;
+    //   transform: translateY(0) rotate(0) ;
+    //   transition: transform 1s ease-in-out;      
+    // }
+    // &:last-child {
+    //   transform: translateY(0) rotate(0) ;
+    //   transition: transform 1s ease-in-out;
+    //   background-color: blue;
+    // }
   }
 }
-

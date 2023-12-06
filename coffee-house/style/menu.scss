@@ -75,6 +75,9 @@
     gap: 40px;
     // max-height: 1052px;
     // overflow: hidden;
+    // @include desktop1400 {
+    //   gap: 30px;
+    // }
 
     @include tablet800 {
       padding-left: 10px;

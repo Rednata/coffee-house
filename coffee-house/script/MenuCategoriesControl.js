@@ -1,3 +1,5 @@
+import { mediaQueryFunc } from './CommonFunc.js';
+
 const menuBtnWrap = document.querySelector('.menu__btn-wrap')
 const btnsType = document.querySelectorAll('.menu__button');
 const list = document.querySelector('.menu__list');
@@ -31,29 +33,36 @@ export const getData = (type) => {
 }
 
 export const renderList = (data) => {  
-  list.append(...data.map(createItem))
+  const isWidth = mediaQueryFunc();
+
+  if (isWidth) {
+    list.append(...data.slice(0, 4).map(createItem))  
+  } else {
+    list.append(...data.map(createItem))
+  }
 }
 
-const refreshShow = () => {
-  refresh.classList.remove('menu__refresh_hidden');
-  refresh.classList.add('menu__refresh_show');    
-};
+// const refreshShow = () => {
+//   refresh.classList.remove('menu__refresh_hidden');
+//   refresh.classList.add('menu__refresh_show');    
+// };
 
-const refreshHidden = () => {
-  refresh.classList.add('menu__refresh_hidden');
-  refresh.classList.remove('menu__refresh_show');
-};
+// const refreshHidden = () => {
+//   refresh.classList.add('menu__refresh_hidden');
+//   refresh.classList.remove('menu__refresh_show');
+// };
 
-const refreshControl = (data) => {
-  refresh.addEventListener('click', () => {
-    renderList(data.slice(4, 8));
-    refresh.disabled = true;
-    refresh.classList.add('menu__refresh_hidden');
-  });
-};
+// const refreshControl = (data) => {
+//   refresh.addEventListener('click', () => {
+//     renderList(data.slice(4, 8));
+//     refresh.disabled = true;
+//     refresh.classList.add('menu__refresh_hidden');
+//   });
+// };
 
-export const menuCategoriesControl = () => {
-
+export const menuCategoriesControl = (dataStart) => {
+  if (dataStart) renderList(dataStart);
+  console.log(list);
   btnsType.forEach(btn => {
     btn.addEventListener('click', async () => {
 
@@ -68,16 +77,19 @@ export const menuCategoriesControl = () => {
       list.innerHTML = '';
       const data = await getData(btn.textContent.toLowerCase());
       console.log('data: ', data);
+      
+      renderList(data);
+      
 
-      if (data.length > 4) {
-        refreshShow();
-        renderList(data.slice(0, 4));   
-        refreshControl(data);
-      } else {
-        refreshHidden();
-        renderList(data);        
-        // console.log(list);   
-      }
+      // if (data.length > 4) {
+      //   refreshShow();
+      //   renderList(data.slice(0, 4));   
+      //   refreshControl(data);
+      // } else {
+      //   refreshHidden();
+      //   renderList(data);        
+        
+      // }
 
     });
   })
