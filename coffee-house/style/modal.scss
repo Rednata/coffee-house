@@ -1,18 +1,15 @@
 .modal {
   position: fixed;
   inset: 0;
-  // height: 100%;
-  border: 2px solid green;
-
+  
   &_hidden {
     display: none;
   }
-
+  &__container {
+    padding: 40px;
+  }
   &__overlay {
-    // position: fixed;
-    // inset: 0;
-    height: 100%;
-    border: 1px solid red;
+    height: 100%;    
     background-color: $back-backdrop;
     display: flex;
     align-items: center;
@@ -22,16 +19,36 @@
   &__wrap {
     display: flex;
     gap: 20px;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 16px;
     border-radius: 40px;
     background-color: $back-body;
+
+    @include burger768 {
+      gap: 16px;
+      padding: 15px;
+    }
+    @include tablet720 {
+      flex-direction: column;
+    }
   }
 
   &__img {
     border-radius: 40px;
     align-self: flex-start;
+    width: 310px;
+
+    @include tablet1024 {
+      flex-shrink: 0;
+    }
+    @include tablet720 {
+      margin: 0 auto;
+    }
+
+    @include mobile580 {
+      display: none;
+    }
   }
 
   &__content {
@@ -61,33 +78,10 @@
     display: flex;
     gap: 8px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
   }
 
   &__item {
-  }
-
-  &__btn {
- 
-    // &_S:before {
-    //   @include beforeBtn('S');
-    // }
-  
-    // &_M:before {
-    //   @include beforeBtn('M');      
-    // }
-    // &_L:before {
-    //   @include beforeBtn('L');      
-    // }
-  
-    // &_1:before {
-    //   @include beforeBtn('1');      
-    // }
-    // &_2:before {
-    //   @include beforeBtn('2');      
-    // }
-    // &_3:before {
-    //   @include beforeBtn('3');      
-    // }
   }
 
   &__total-wrap {
@@ -101,7 +95,6 @@
 
 
   &__note {    
-    // position: relative;
     display: flex;
     gap: 8px;
     font-size: 10px;
@@ -109,11 +102,9 @@
     border-top: 1px solid $border-light;
     padding-top: 12px;
     padding-bottom: 12px;
-    margin-bottom: 20px;    
-    border: 1px solid red;
+    margin-bottom: 20px;        
 
-    &:before {      
-      // position: absolute;
+    &:before {            
       content: '';
       display: block;
       width: 30px;
@@ -121,8 +112,6 @@
       background-image: url("/img/info.svg");
       background-repeat: no-repeat;
       background-position: center;
-      border: 1px solid red;
-      // margin-right: 9px;
     }
   }
 
