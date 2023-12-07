@@ -68,26 +68,26 @@
 
   &__btn {
  
-    &_S:before {
-      @include beforeBtn('S');
-    }
+    // &_S:before {
+    //   @include beforeBtn('S');
+    // }
   
-    &_M:before {
-      @include beforeBtn('M');      
-    }
-    &_L:before {
-      @include beforeBtn('L');      
-    }
+    // &_M:before {
+    //   @include beforeBtn('M');      
+    // }
+    // &_L:before {
+    //   @include beforeBtn('L');      
+    // }
   
-    &_1:before {
-      @include beforeBtn('1');      
-    }
-    &_2:before {
-      @include beforeBtn('2');      
-    }
-    &_3:before {
-      @include beforeBtn('3');      
-    }
+    // &_1:before {
+    //   @include beforeBtn('1');      
+    // }
+    // &_2:before {
+    //   @include beforeBtn('2');      
+    // }
+    // &_3:before {
+    //   @include beforeBtn('3');      
+    // }
   }
 
   &__total-wrap {
@@ -131,5 +131,69 @@
     height: 44px;
     min-height: 0;
     border: 1px solid $border-dark;
+  }
+}
+
+.form {
+
+  &__fieldset {
+    border: none;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    border: 1px solid $border-light;
+    padding: 8px 16px 8px 8px;
+    font-weight: 600;
+    color: $text-dark;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &_active {
+      background-color: $back-container;
+      color: $text-light;
+      cursor: default;
+    } 
+    
+    @include mobile370 {
+      padding: 6px;
+    }
+    @include hover {
+      &:hover {
+        background-color: $back-container;
+        color: $text-light;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+    }  
+    
+  }
+}
+
+.form__input {
+  appearance: none;
+
+  &:before {
+    // content: '';
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: $border-light;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding: 7px;   
+  }
+
+  &_S:before {
+    @include beforeInput('S')
+  }
+  &_M:before {
+    @include beforeInput('M')
+  }
+  &_L:before {
+    @include beforeInput('L')
   }
 }

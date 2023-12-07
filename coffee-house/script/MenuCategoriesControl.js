@@ -23,11 +23,9 @@ const createItem = ({ img, title, descript, price }) => {
 };
 
 export const getData = (type, title) => {  
-  console.log('title: ', title);
   return fetch('./data/menuCategoriesData.json')                  
     .then(response => response.json())
-    .then(data => {
-      console.log('data: ', data);
+    .then(data => {      
       const [{ types }] = data.filter(item => item.name === type);      
       const itemData = types.find(item => item.title === title);            
       const { size: sizeArray, add: addArray } = data.find(item => item.name === type);
@@ -46,31 +44,11 @@ export const renderList = (data) => {
   }
 }
 
-// const refreshShow = () => {
-//   refresh.classList.remove('menu__refresh_hidden');
-//   refresh.classList.add('menu__refresh_show');    
-// };
-
-// const refreshHidden = () => {
-//   refresh.classList.add('menu__refresh_hidden');
-//   refresh.classList.remove('menu__refresh_show');
-// };
-
-// const refreshControl = (data) => {
-//   refresh.addEventListener('click', () => {
-//     renderList(data.slice(4, 8));
-//     refresh.disabled = true;
-//     refresh.classList.add('menu__refresh_hidden');
-//   });
-// };
-
 export const menuCategoriesControl = (typesStart) => {
   if (typesStart) renderList(typesStart);
-  console.log(list);
+
   btnsType.forEach(btn => {
     btn.addEventListener('click', async () => {
-
-      let count = 1;
 
       btnsType.forEach(btn => {
         btn.classList.remove('button-check_active');
@@ -83,22 +61,7 @@ export const menuCategoriesControl = (typesStart) => {
       console.log('types: ', types);
       
       renderList(types);
-      
-
-      // if (data.length > 4) {
-      //   refreshShow();
-      //   renderList(data.slice(0, 4));   
-      //   refreshControl(data);
-      // } else {
-      //   refreshHidden();
-      //   renderList(data);        
-        
-      // }
 
     });
   })
-
-  
-
-  // console.log(data);
 };
