@@ -1,4 +1,4 @@
-import { getData } from "./menuCategoriesControl";
+import { getData } from "./CommonFunc";
 
 const cardsList = document.querySelector('.menu__list');
 const modal = document.querySelector('.modal');
