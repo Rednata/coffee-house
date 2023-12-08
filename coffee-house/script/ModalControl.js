@@ -4,7 +4,11 @@ const cardsList = document.querySelector('.menu__list');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.modal__overlay');
 const closeBtn = document.querySelector('.modal__btn-close');
-const form = modal.querySelector('.form');
+let form;
+if (location.pathname === '/menu.html') {
+  form = modal.querySelector('.form');
+}
+// const form = modal.querySelector('.form');
 const totalPrice = document.querySelector('.modal__total-price');
 
 const showModal = () => {
