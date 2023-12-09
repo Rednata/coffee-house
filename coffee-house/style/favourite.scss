@@ -23,11 +23,9 @@
   }
 
   &__list {
-    display: flex;
-    // max-width: 480px;    
+    display: flex;    
     margin: 0 auto;
     margin-bottom: 23px;
-    // overflow: hidden;
     gap: 40px;
     transition: transform 0.5s ease-in-out;
     // border: 1px solid red;
@@ -99,3 +97,19 @@
   }
 }
 
+.anima1 {
+  animation-name: anima;  
+  animation-duration: 10s;
+  animation-delay: 2s;  
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anima {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1460px);
+  }
+}
