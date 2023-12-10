@@ -41,6 +41,7 @@
     flex-shrink: 0;  
     // border: 1px solid black  
     // background-color: #fff;
+
   }
 
   &__button {
@@ -82,34 +83,23 @@
   gap: 12px;
   justify-content: center;
 
-  &__button {
-    box-sizing: content-box;
+  &__position {    
     width: 40px;
     height: 4px;
     background-color: $border-light;    
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    background-clip: padding-box;
+  }
+
+  &__button {
+    box-sizing: content-box;
+    width: 0;
+    height: 4px;
+    background-color: $border-dark;    
+    
 
     &_active {
-      background-color: $border-dark
+      width: 40px;
+      transition: width 1s ease-in-out;
     }
   }
 }
 
-.anima1 {
-  animation-name: anima;  
-  animation-duration: 10s;
-  animation-delay: 2s;  
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-
-@keyframes anima {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1460px);
-  }
-}
