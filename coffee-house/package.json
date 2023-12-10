@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite --open --port 3000",
     "build": "vite build --base=https://rolling-scopes-school.github.io/rednata-JSFE2023Q4",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"

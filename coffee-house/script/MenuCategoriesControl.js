@@ -1,52 +1,44 @@
 import { getData } from './CommonFunc.js';
 
-const menuBtnWrap = document.querySelector('.menu__btn-wrap')
 const btnsType = document.querySelectorAll('.menu__button');
 const list = document.querySelector('.menu__list');
+const mediaQuery = window.matchMedia('(max-width: 768px');
 const refresh = document.querySelector('.menu__refresh');
-let refreshFlag = false;
-let data = [];
 
-const changeColor = (color) => {
-  document.body.style.color = color;
+const hiddenCards = () => {
+  const listItems = list.querySelectorAll('.menu-card');  
+  listItems.forEach((item, i) => {
+    if (i >= 4) {        
+      item.classList.add('menu-card_hidden')
+    }
+  }) 
 }
 
-const mediaQuery = window.matchMedia('(max-width: 768px');
+const showCards = () => {
+  const listItems = list.querySelectorAll('.menu-card');   
+  listItems.forEach((item, i) => {    
+      item.classList.remove('menu-card_hidden')    
+  }) 
+}
 
-const mediaQueryFunc = async () => {
-  const type = list.dataset.name;
+const showRefresh = () => {
+  refresh.classList.remove('menu__refresh_hidden')
+}
 
+const hiddenRefresh = () => {
+  refresh.classList.add('menu__refresh_hidden')
+}
+
+const mediaQueryFunc = () => {
   if (mediaQuery.matches) {    
-    console.log('меньше 768 true');
-    changeColor("tomato");    
-
-    const { types } = await getData(type);
-    console.log('types: ', types);
-    data = [...types.slice(0, 4)];
-    console.log('data: ', data);
-    // renderList(types.slice(0, 4));
-    // const removeItems = listItems.slice(4, 8);
-    // if (removeItems.length) {
-    //   console.log('removeItems: ', removeItems);
-    //   listItems[0].remove();
-    //   listItems[1].remove();
-    //   listItems[2].remove();
-    //   listItems[3].remove();
-    // }
-    
+    hiddenCards();    
+    showRefresh();
     return true;
   } else {
-
-    const { types } = await getData(type);
-    console.log('types: ', types);
-    data = [...types];
-    console.log('data: ', data);
-    changeColor("violet");
-
-    console.log('больше 768 false');    
+    showCards();
+    hiddenRefresh();
     return false;
   }
-  
 }
 
 const createItem = ({ img, title, descript, price }) => {
@@ -56,52 +48,69 @@ const createItem = ({ img, title, descript, price }) => {
   `
     <div class="menu-card__img-wrap">
       <img class="menu-card__img" src="${img}" alt="${title}">
+      <div class="menu-card__content-wrap">
+        <h3 class="menu-card__title">${title}</h3>
+        <p class="menu-card__text">${descript}</p>
+        <p class="menu-card__price">${price}</p>
+      </div>     
     </div>            
-    <div class="menu-card__content-wrap">
-      <h3 class="menu-card__title">${title}</h3>
-      <p class="menu-card__text">${descript}</p>
-      <p class="menu-card__price">${price}</p>
-    </div>     
   `)
   return li;
 };
 
-
 export const renderList = (data) => {  
-  console.warn('data: ', data);
   
-  // if (mediaQueryFunc()) {
-  //   list.append(...data.slice(0, 4).map(createItem))  
-  // } else {
     list.append(...data.map(createItem))
-  // }
-
+    if (data.length <= 4) {
+      console.log('sdfsdfsdf');
+      hiddenRefresh();
+    } else {
+      const isWidth = mediaQueryFunc();
+      console.log('isWidth: ', isWidth);
+      if (isWidth) {
+        hiddenCards();    
+        refresh.classList.remove('menu__refresh_hidden')
+      }
+    }
+    
 }
 
-export const menuCategoriesControl = (typesStart) => {
-  console.log('typesStart: ', typesStart);
-  // mediaQueryFunc();
-  mediaQuery.addEventListener('change', mediaQueryFunc);
-  renderList(data);
+const btnsTypesControl = () => {
+  btnsType.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      btnsType.forEach(btn => {
+        btn.classList.remove('button-check_active');
+        btn.disabled = false;
+      })
+      btn.classList.add('button-check_active')
+      btn.disabled = true;
+      list.innerHTML = '';
+      const { types } = await getData(btn.textContent.toLowerCase());
+      renderList(types);
+    });
+  })
+}
 
+const refreshBtnControl = () => {
+  refresh.addEventListener('click', () => {
+    showCards();
+    hiddenRefresh();
+  })
+}
+
+export const menuCategoriesControl = async () => {
+  
+  const typesStart = await getData('coffee');
+  const isWidth = mediaQueryFunc();
+
+  mediaQuery.addEventListener('change', mediaQueryFunc);
+  renderList(typesStart.types);
+  if (isWidth) {
+    hiddenCards();    
+  }
+
+  btnsTypesControl();
+  refreshBtnControl();
 };
 
 
-
-// btnsType.forEach(btn => {
-//   btn.addEventListener('click', async () => {
-
-//     btnsType.forEach(btn => {
-//       btn.classList.remove('button-check_active');
-//       btn.disabled = false;
-//     })
-//     btn.classList.add('button-check_active')
-//     btn.disabled = true;
-//     list.innerHTML = '';
-//     const { types } = await getData(btn.textContent.toLowerCase());
-//     console.log('types: ', types);
-    
-//     renderList(types);
-
-//   });
-// })
