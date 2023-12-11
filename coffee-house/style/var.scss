@@ -9,7 +9,7 @@ $back-backdrop: rgba(64, 63, 61, 0.80);
 $border-light: #C1B6AD;
 $border-dark: #665F55;
 
-@mixin beforeBtn ($content: '') {  
+@mixin beforeInput($content: '') {  
   content: $content;
   color: $text-dark;
   line-height: 1;

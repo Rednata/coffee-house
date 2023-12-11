@@ -1,11 +1,17 @@
 .menu-card {
   display: flex;
   flex-direction: column;
-  width: 310px;
+  width: 301px;
   min-height: 506px;
   border: 1px solid $border-light;
   border-radius: 40px;
   cursor: pointer;
+
+  // @include desktop1400 {
+  //   width: 21%;
+  //   font-size: 15px;
+  //   min-height: 480px;
+  // }
 
   @include hover {
     &:hover {
@@ -49,6 +55,11 @@
 
   &__price {    
     font-size: 24px;
-    font-weight: 600;    
+    font-weight: 600;   
+
   }
+
+  &_hidden {
+    display: none;
+  }  
 }

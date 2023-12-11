@@ -11,11 +11,11 @@
     <title>coffee-house Resource</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header ">
       <div class="container header__container">
         <div class="logo header__logo">   
           <a href="./">
-            <img src="img/logo.svg" alt="Логотип кофейни Resourse">                  
+            <img class="logo__img" src="img/logo.svg" alt="Логотип кофейни Resourse">                  
           </a>                     
         </div>
         <nav class="nav header__nav">
@@ -38,18 +38,15 @@
           </ul>
         </nav>  
         <button class="header__burger burger">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="43" height="43" rx="21.5" stroke="#665F55"/>
-            <path d="M14 18H30" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M14 26H30" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>    
+          <span class="burger__dash"></span>          
+          <span class="burger__dash"></span>
+        </button>            
       </div>
       
     </header>
 
     <main class="main">
-      <section class="enjoy container">
+      <section class="enjoy container">        
           <div class="enjoy__container">
             <div class="enjoy__content">
               <h1 class="enjoy__title">
@@ -60,6 +57,14 @@
               </p>
               <a class="enjoy__link" href="./menu.html">Menu</a>
             </div>          
+            <video
+              class="enjoy__video"              
+              autoplay
+              loop
+              muted>
+              <source src="./public/img/video.mp4" type="video/mp4"></source>
+            </video>
+            
           </div>                  
       </section>
 
@@ -68,49 +73,53 @@
           Choose your <span class="title__color">favorite </span>coffee
         </h2>
         <div class="favourite__wrap">
-          <ul class="favourite__list">
-            <li class="favourite__item favour-card">
-              <img class="favour-card__img" src="/img/coffee-slider-1.png" alt="">
-              <div class="favour-card__content">
-                <h3 class="favour-card__title">S’mores Frappuccino</h3>
-                <p class="favour-card__descript">
-                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
-                </p>
-                <p class="favour-card__price">$5.50</p>               
-              </div>
-            </li>
-            <li class="favourite__item favour-card">
-              <img class="favour-card__img" src="/img/coffee-slider-2.png" alt="">
-              <div class="favour-card__content">
-                <h3 class="favour-card__title">Caramel Macchiato</h3>
-                <p class="favour-card__descript">
-                  Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
-                </p>
-                <p class="favour-card__price">$5</p>               
-              </div>
-            </li>
-            <li class="favourite__item favour-card">
-              <img class="favour-card__img" src="/img/coffee-slider-3.png" alt="">
-              <div class="favour-card__content">
-                <h3 class="favour-card__title">Ice coffee</h3>
-                <p class="favour-card__descript">
-                  A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
-                </p>
-                <p class="favour-card__price">$4.50</p>               
-              </div>
-            </li>
-          </ul>
-          <ul class="favourite__bar bar">
-            <li class="favourite__position">
-              <button class="bar__button bar__button_active"></button>
-            </li>
-            <li class="favourite__position">
-              <button class="bar__button"></button>
-            </li>
-            <li class="favourite__position">
-              <button class="bar__button"></button>
-            </li>
-          </ul>
+          <div class="favourite__inner-wrap">
+            <ul class="favourite__list anima" data-count="">
+              <li class="favourite__item favour-card">
+                <img class="favour-card__img" src="/img/coffee-slider-1.png" alt="">
+                <div class="favour-card__content">
+                  <h3 class="favour-card__title">S’mores Frappuccino</h3>
+                  <p class="favour-card__descript">
+                    This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.
+                  </p>
+                  <p class="favour-card__price">$5.50</p>               
+                </div>
+              </li>
+              <li class="favourite__item favour-card">
+                <img class="favour-card__img" src="/img/coffee-slider-2.png" alt="">
+                <div class="favour-card__content">
+                  <h3 class="favour-card__title">Caramel Macchiato</h3>
+                  <p class="favour-card__descript">
+                    Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+                  </p>
+                  <p class="favour-card__price">$5</p>               
+                </div>
+              </li>
+              <li class="favourite__item favour-card">
+                <img class="favour-card__img" src="/img/coffee-slider-3.png" alt="">
+                <div class="favour-card__content">
+                  <h3 class="favour-card__title">Ice coffee</h3>
+                  <p class="favour-card__descript">
+                    A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+                  </p>
+                  <p class="favour-card__price">$4.50</p>               
+                </div>
+              </li>
+            </ul>
+            <ul class="favourite__bar bar">
+              <li class="bar__position">
+                <p class="bar__button bar__button"></p>
+              </li>
+              <li class="bar__position">
+                <p class="bar__button"></p>
+              </li>
+              <li class="bar__position">
+                <p class="bar__button"></p>
+              </li>
+            </ul>
+
+          </div>
+          
           <button class="favourite__button favourite__button_left">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
@@ -182,63 +191,6 @@
         </div>
         <div class="app__img-content">
           <img class="app__img" src="/img/mobile-screens.png" alt="">
-        </div>        
-      </section>
-
-      <section class="visually-hidden modal">
-        <div class="modal__overlay">
-          <div class="modal__wrap">
-            <img class="modal__img" src="./img/coffee-1.jpg" alt="">
-            <div class="modal__content">
-              <h2 class="modal__title">Irish coffee</h2>
-              <p class="modal__descript">
-                Fragrant black coffee with Jameson Irish whiskey and whipped milk
-              </p>
-
-              <div class="modal__btn-wrap">
-                <p class="modal__btn-wrap-title">
-                  Size
-                </p>
-                <ul class="modal__list">
-                  <li class="modal__item">
-                    <button class="button-check button-check_active modal__btn modal__btn_S">200 ml</button>
-                  </li>
-                  <li class="modal__item">
-                    <button class="button-check modal__btn modal__btn_M">300 ml</button>
-                  </li>
-                  <li class="modal__item">
-                    <button class="button-check modal__btn modal__btn_L">400 ml</button>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="modal__btn-wrap">
-                <p class="modal__btn-wrap-title">
-                  Additives
-                </p>
-                <ul class="modal__list">
-                  <li class="modal__item">
-                    <button class="button-check modal__btn modal__btn_1">Sugar</button>
-                  </li>
-                  <li class="modal__item">
-                    <button class="button-check modal__btn modal__btn_2">Cinnamon</button>
-                  </li>
-                  <li class="modal__item">
-                    <button class="button-check modal__btn modal__btn_3">Syrup</button>
-                  </li>
-                </ul>
-              </div>
-              
-              <div class="modal__total-wrap">
-                <span class="modal__total-title">Total:</span>                
-                <span class="modal__total-price">$7.00</span>
-              </div>
-              <p class="modal__note">
-                The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
-              </p>
-              <button class="button modal__btn-close">Close</button> 
-            </div>              
-          </div>          
         </div>        
       </section>
 
