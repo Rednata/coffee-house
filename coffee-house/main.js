@@ -2,11 +2,13 @@ import 'normalize.css';
 import { burgerControl } from './script/Burger';
 import { carouselControl } from './script/Carousel';
 import { menuCategoriesControl } from './script/menuCategoriesControl';
-// import { getData } from './script/CommonFunc';
 import { modalControl } from './script/ModalControl';
 import './style.scss';
 
-console.log(111);
+console.log(`
+1. Не реализован свайп (не успела)
+2. Бесконечная прокрутка слайдера не возобновляется после взаимодействями с кнопками управления слайдером
+`);
 
 const init = async () => {
   burgerControl();

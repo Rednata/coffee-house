@@ -4,12 +4,10 @@ const innerWrapCarousel = document.querySelector('.favourite__inner-wrap');
 const btnLeft = document.querySelector('.favourite__button_left');
 const btnRight = document.querySelector('.favourite__button_right');
 const bars = document.querySelectorAll('.bar__button');
-console.log('bars: ', bars);
 
-// const widthCarousel = 480;
 const widthCarousel = 520;
 
-const moveLeft = (animaSlider) => {  
+const moveLeft = (animaSlider) => { 
   animaSlider.forEach(anima => {    
     anima.cancel() ;
   });
@@ -22,11 +20,6 @@ const moveLeft = (animaSlider) => {
   listCarousel.style.transform = `translateX(-${widthCarousel * pos}px)`;  
   bars.forEach(bar => bar.classList.remove('bar__button_active'))
   bars[pos].classList.add('bar__button_active');
-
-  // animaSlider.forEach(anima => {    
-  //   anima.pause() ;
-  // });
-  // animaSlider[0].play();
 
   
 };
@@ -125,20 +118,20 @@ const carouselInfinite = () => {
     
   })
   
-  // listCarousel.addEventListener('mouseover', () => {    
-  //   if (animaSlider0.playState === 'running') {
-  //     animaSlider0.pause()
-  //     animaBar0.pause()
-  //   }
-  //   if (animaSlider1.playState === 'running') {
-  //     animaSlider1.pause()
-  //     animaBar1.pause()
-  //   }
-  //   if (animaSlider2.playState === 'running') {
-  //     animaSlider2.pause()
-  //     animaBar2.pause()
-  //   }
-  // })
+  listCarousel.addEventListener('mouseover', () => {    
+    if (animaSlider0.playState === 'running') {
+      animaSlider0.pause()
+      animaBar0.pause()
+    }
+    if (animaSlider1.playState === 'running') {
+      animaSlider1.pause()
+      animaBar1.pause()
+    }
+    if (animaSlider2.playState === 'running') {
+      animaSlider2.pause()
+      animaBar2.pause()
+    }
+  })
   
   return [animaSlider0, animaSlider1, animaSlider2, animaBar0, animaBar1, animaBar2];
 }
@@ -227,19 +220,19 @@ export const carouselControl = () => {
   btnRight.addEventListener('click', () => {
     moveRight(animaSlider)});
   
-  // listCarousel.addEventListener('mouseout', () => {
-  //   if (animaSlider0.playState === 'paused') {
-  //     animaSlider0.play();
-  //     animaBar0.play()
-  //   }
-  //   if (animaSlider1.playState === 'paused') {
-  //     animaSlider1.play();
-  //     animaBar1.play()
-  //   }
-  //   if (animaSlider2.playState === 'paused') {
-  //     animaSlider2.play();
-  //     animaBar2.play()
-  //   }
-  // })
+  listCarousel.addEventListener('mouseout', () => {
+    if (animaSlider0.playState === 'paused') {
+      animaSlider0.play();
+      animaBar0.play()
+    }
+    if (animaSlider1.playState === 'paused') {
+      animaSlider1.play();
+      animaBar1.play()
+    }
+    if (animaSlider2.playState === 'paused') {
+      animaSlider2.play();
+      animaBar2.play()
+    }
+  })
 
 };

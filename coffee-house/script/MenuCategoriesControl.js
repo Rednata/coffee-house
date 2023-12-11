@@ -66,7 +66,6 @@ export const renderList = (data) => {
       hiddenRefresh();
     } else {
       const isWidth = mediaQueryFunc();
-      console.log('isWidth: ', isWidth);
       if (isWidth) {
         hiddenCards();    
         refresh.classList.remove('menu__refresh_hidden')
