@@ -5,10 +5,13 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.modal__overlay');
 const closeBtn = document.querySelector('.modal__btn-close');
 let form;
-if (location.pathname === '/menu.html') {
+if (location.pathname.slice(-9) === 'menu.html') {
+  console.log(location.pathname.slice(-9));
   form = modal.querySelector('.form');
+  console.log('form: ', form);
 }
 // const form = modal.querySelector('.form');
+
 const totalPrice = document.querySelector('.modal__total-price');
 
 const showModal = () => {

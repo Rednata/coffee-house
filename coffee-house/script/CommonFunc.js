@@ -1,7 +1,4 @@
 
-
-// mediaQuery.addEventListener('change', mediaQueryFunc);
-
 export const getData = (type, title) => {  
   return fetch('./data/menuCategoriesData.json')                  
     .then(response => response.json())
