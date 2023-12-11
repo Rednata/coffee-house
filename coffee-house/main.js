@@ -11,14 +11,12 @@ const init = () => {
 2. Бесконечная прокрутка слайдера не возобновляется после взаимодействями с кнопками управления слайдером
 `);
   burgerControl();
-  if (location.pathname === '/menu.html') {    
+  if (location.pathname.slice(-9) === 'menu.html') {
     menuCategoriesControl();
     modalControl();
+  } else {
+  carouselControl();
   }
-  if (location.pathname === '/') {
-    carouselControl();
-  }
-
 };
 
 init();
