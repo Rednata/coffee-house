@@ -1,5 +1,4 @@
 .favour-card {
-  background-color: rgba(255, 255, 255, 0.3);
   transition: transform 1s ease-in-out;
 
   &__img {
@@ -25,12 +24,6 @@
   &__price {
     font-size: 24px;
     font-weight: 600;
-  }
-
-  &_active {
-   visibility: hidden;
-   visibility: visible;
-  
   }
 
 }

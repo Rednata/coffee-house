@@ -9,39 +9,47 @@ let currentIndex = -1;
 let isPaused = false;
 
 const moveSliderLeft = () => {
-  isPaused = true;
-  // const activeBar = document.querySelector('.bar__button_active');
+  isPaused = true;  
   let currentIndex = bars.findIndex(item => item === document.querySelector('.bar__button_active'));
   currentIndex += 1;
-  if (currentIndex >=3)  {
+  if (currentIndex >=length)  {
     currentIndex = 0;
   }
   
   sliderList.style.transform = `translateX(${-currentIndex * 520}px)`;
   bars.forEach(bar => bar.classList.remove('bar__button_active'))
-  bars[currentIndex].classList.add('bar__button_active');
-  console.log('currentIndex: ', currentIndex);      
-};
+  bars[currentIndex].classList.add('bar__button_active');  
+  sliderList.removeEventListener('mouseover', controlMouseOver);
+  sliderList.removeEventListener('mouseout', controlMouseOut);
+  setTimeout(() => {
+    isPaused = false;
+    sliderList.addEventListener('mouseover', controlMouseOver);
+    sliderList.addEventListener('mouseout', controlMouseOut);
+  }, 5000)
+}
 
-const moveSliderRight = () => {
-  isPaused = true;
-  // const activeBar = document.querySelector('.bar__button_active');
+const moveSliderRight = () => {  
+  isPaused = true;  
   let currentIndex = bars.findIndex(item => item === document.querySelector('.bar__button_active'));
-  if (currentIndex >=2)  {
+  if (currentIndex >=length - 1)  {
     currentIndex = -1;
   }
   currentIndex += 1;
   sliderList.style.transform = `translateX(${-currentIndex * 520}px)`;
   bars.forEach(bar => bar.classList.remove('bar__button_active'))
-  bars[currentIndex].classList.add('bar__button_active');
-  console.log('currentIndex: ', currentIndex);       
-
+  bars[currentIndex].classList.add('bar__button_active');  
+  sliderList.removeEventListener('mouseover', controlMouseOver);
+  sliderList.removeEventListener('mouseout', controlMouseOut);
+  setTimeout(() => {
+    isPaused = false;
+    sliderList.addEventListener('mouseover', controlMouseOver);
+    sliderList.addEventListener('mouseout', controlMouseOut);
+  }, 5000)
+  
 };
 
-const sliderInfinity = () => {
-  console.log('paused ==', isPaused);
-  return setInterval(() => { 
-    console.log('paused ==', isPaused);
+const sliderInfinity = () => {  
+  return setInterval(() => {     
     if (!isPaused) {
       if (currentIndex >=2)  {
         currentIndex = -1;
@@ -49,29 +57,38 @@ const sliderInfinity = () => {
       currentIndex += 1;
       sliderList.style.transform = `translateX(${-currentIndex * 520}px)`;
       bars.forEach(bar => bar.classList.remove('bar__button_active'))
-      bars[currentIndex].classList.add('bar__button_active');
-      console.log('currentIndex: ', currentIndex);      
+      bars[currentIndex].classList.add('bar__button_active');      
     }    
   }, 3000);
 }
 
+const controlMouseOver = () => {  
+  isPaused = true;    
+  const activeBar = document.querySelector('.bar__button_active') || bars[0];    
+  activeBar.style.animationPlayState = 'paused';
+}
+
+const controlMouseOut = () => {  
+  const activeBar = document.querySelector('.bar__button_active') || bars[0];
+  activeBar.style.animationPlayState = 'running';
+  isPaused = false;
+}
+
 export const sliderControl = () => {
   sliderInfinity();
-
   btnLeft.addEventListener('click', moveSliderLeft);
   btnRight.addEventListener('click', moveSliderRight);
+  sliderList.addEventListener('mouseover', controlMouseOver);
+  sliderList.addEventListener('mouseout', controlMouseOut);
 
-  sliderList.addEventListener('mouseover', () => {
-    console.log('over');
-    isPaused = true;    
-    const activeBar = document.querySelector('.bar__button_active') || bars[0];
-    console.log('activeBar: ', activeBar);
-    activeBar.style.animationPlayState = 'paused';
-  });
-  sliderList.addEventListener('mouseout', () => {
-    console.log('OUT');
-    const activeBar = document.querySelector('.bar__button_active') || bars[0];
-    activeBar.style.animationPlayState = 'running';
-    isPaused = false;
-  });
+  sliderList.addEventListener('touchstart', (e) => {
+    console.log(e);
+    console.log('tachSTART');
+    
+  })
+  sliderList.addEventListener('touchend', (e) => {
+    console.log(e);
+    console.log('tachEND');
+  })
+  
 };
