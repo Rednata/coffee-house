@@ -18,8 +18,7 @@
     // max-width: 600px;
     max-width: 480px;    
     margin: 0 auto;
-    overflow: hidden;
-    // border: 1px solid green;
+    overflow: hidden;    
   }
 
   &__list {
@@ -97,9 +96,20 @@
     
 
     &_active {
-      width: 40px;
-      transition: width 1s ease-in-out;
+      animation: barAnimation 3s ease-in-out;
+
+      // animation-fill-mode: farwards;
+      // width: 40px;
+      // transition: width 3s ease-in-out;
     }
   }
 }
 
+@keyframes barAnimation {
+  from {
+    width: 0
+  }
+  to {
+    width: 40px;
+  }
+}

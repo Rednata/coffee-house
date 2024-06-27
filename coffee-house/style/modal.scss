@@ -178,12 +178,12 @@
   }
 
   &_S:before {
-    @include beforeInput('S')
+    @include beforeInput('1')
   }
   &_M:before {
-    @include beforeInput('M')
+    @include beforeInput('2')
   }
   &_L:before {
-    @include beforeInput('L')
+    @include beforeInput('3')
   }
 }

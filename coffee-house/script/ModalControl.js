@@ -78,7 +78,7 @@ const renderForm = (sizeArray, addArray) => {
   `
     <li class="modal__item">
       <label class="form__label" for="add1">
-        <input class="form__input form__input_M" type="checkbox" name="add1" id="add1">
+        <input class="form__input form__input_S" type="checkbox" name="add1" id="add1">
         ${addArray[0]}
       </label>
     </li>
@@ -90,7 +90,7 @@ const renderForm = (sizeArray, addArray) => {
     </li>
     <li class="modal__item">
       <label class="form__label" for="add3">
-        <input class="form__input form__input_M" type="checkbox" name="add3" id="add3">
+        <input class="form__input form__input_L" type="checkbox" name="add3" id="add3">
         ${addArray[2]}
       </label>
     </li>
