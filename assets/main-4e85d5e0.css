@@ -1,0 +1,1572 @@
+@charset "UTF-8";/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("https://rednata.github.io/coffee-house/fonts/Inter-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url("https://rednata.github.io/coffee-house/fonts/Inter-SemiBold.woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url("https://rednata.github.io/coffee-house/fonts/Inter-SemiBoldItalic.woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+html {
+  position: relative;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #403F3D;
+  background-color: #E1D4C9;
+  display: flex;
+  flex-direction: column;
+}
+.body_hidden {
+  overflow-y: hidden;
+}
+main {
+  flex-grow: 1;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+svg {
+  max-height: 100%;
+}
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+fieldset {
+  padding: 0;
+}
+iframe {
+  border: none;
+}
+/*
+Доступно скрываю элементы
+*/
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+.header {
+  padding-top: 19px;
+}
+.header__container {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+}
+.header__burger {
+  display: none;
+}
+@media (max-width: 768px) {
+  .header__burger {
+    display: flex;
+  }
+}
+.logo {
+  width: 100px;
+  height: 60px;
+  z-index: 20;
+}
+.logo__img {
+  max-width: none;
+}
+.burger {
+  z-index: 20;
+  right: 40px;
+  top: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #403F3D;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 720px) {
+  .burger {
+    right: 16px;
+  }
+}
+.burger_active-burger {
+  gap: 0;
+}
+.burger_active-burger .burger__dash:first-child {
+  transform: translateY(1px) rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+.burger_active-burger .burger__dash:last-child {
+  transform: translateY(-1px) rotate(-45deg);
+  transition: transform 0.3s ease-in-out;
+}
+.burger__dash {
+  height: 2px;
+  width: 16px;
+  background-color: #403F3D;
+  transform: translateY(0) rotate(0);
+  transition: transform 0.3s ease-in-out;
+}
+.nav {
+  width: 65.8%;
+}
+@media (max-width: 1024px) {
+  .nav {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    right: -200%;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    bottom: 0;
+    padding-top: 157px;
+    background-color: #E1D4C9;
+    transition: right 1s ease-in-out;
+  }
+  .nav__list .nav__item:last-child {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+  }
+  .nav__list .nav__item:last-child .nav__link:after {
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+  }
+}
+.nav__list {
+  display: flex;
+  gap: 34px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
+.nav__item:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #403F3D;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+@media (hover: hover) {
+  .nav__item:hover::after {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.nav__item:last-child {
+  margin-right: 0;
+  margin-left: auto;
+  font-weight: 600;
+}
+.nav__item:last-child .nav__link {
+  display: flex;
+  gap: 8px;
+}
+.nav__item:last-child .nav__link:after {
+  content: "";
+  display: block;
+  width: 20px;
+  background-image: url("https://rednata.github.io/coffee-house/img/coffee-cup.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav_active-burger {
+  right: 0;
+  transition: right 1s ease-in-out;
+}
+.enjoy {
+  padding-top: 21px;
+  margin-bottom: 100px;
+}
+.enjoy__container {
+  position: relative;
+  background-image: url("https://rednata.github.io/coffee-house/img/img-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.enjoy__video {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.enjoy__content {
+  position: relative;
+  z-index: 10;
+  padding: 100px 0 100px 100px;
+  width: 530px;
+  box-sizing: content-box;
+}
+@media (max-width: 1024px) {
+  .enjoy__content {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 720px) {
+  .enjoy__content {
+    width: 80%;
+    box-sizing: border-box;
+    padding: 60px 16px;
+  }
+}
+@media (max-width: 580px) {
+  .enjoy__content {
+    width: 100%;
+  }
+}
+@media (max-width: 370px) {
+  .enjoy__content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.enjoy__title {
+  font-size: 72px;
+  font-weight: 600;
+  color: #E1D4C9;
+  line-height: 75px;
+  margin-bottom: 42px;
+}
+@media (max-width: 720px) {
+  .enjoy__title {
+    font-size: 56px;
+    line-height: 62px;
+  }
+}
+@media (max-width: 580px) {
+  .enjoy__title {
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 370px) {
+  .enjoy__title {
+    font-size: 35px;
+    line-height: 39px;
+  }
+}
+.enjoy__color {
+  font-style: italic;
+  color: #B0907A;
+}
+.enjoy__text {
+  color: #E1D4C9;
+  margin-bottom: 42px;
+  line-height: 24px;
+}
+@media (max-width: 580px) {
+  .enjoy__text {
+    margin-bottom: 40px;
+  }
+}
+.enjoy__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 200px;
+  height: 64px;
+  font-weight: 600;
+  background-color: #E1D4C9;
+  border-radius: 100px;
+}
+.enjoy__link:after {
+  position: absolute;
+  content: "";
+  display: block;
+  right: 27%;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://rednata.github.io/coffee-house/img/coffee-cup.svg");
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (hover: hover) {
+  .enjoy__link:hover:after {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+}
+@media (max-width: 370px) {
+  .enjoy__link {
+    height: 48px;
+  }
+}
+.button {
+  min-width: 200px;
+  min-height: 64px;
+  background-color: #E1D4C9;
+  border-radius: 100px;
+  color: #403F3D;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+@media (hover: hover) {
+  .button:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+.input-check,
+.button-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #C1B6AD;
+  padding: 8px 16px 8px 8px;
+  font-weight: 600;
+  color: #403F3D;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+@media (max-width: 370px) {
+  .input-check,
+  .button-check {
+    padding: 6px;
+  }
+}
+.input-check:before,
+.button-check:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #C1B6AD;
+  border-radius: 50%;
+  background-position: center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  padding: 7px;
+}
+@media (max-width: 370px) {
+  .input-check:before,
+  .button-check:before {
+    width: 20px;
+    height: 20px;
+  }
+}
+.input-check_active,
+.button-check_active {
+  background-color: #665F55;
+  color: #E1D4C9;
+  cursor: default;
+}
+@media (hover: hover) {
+  .input-check:hover,
+  .button-check:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+.title {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+@media (max-width: 720px) {
+  .title {
+    font-size: 52px;
+    line-height: 58px;
+  }
+}
+@media (max-width: 580px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.title__color {
+  color: #B0907A;
+  font-style: italic;
+}
+.favourite {
+  margin-bottom: 88px;
+  scroll-margin: 20px;
+}
+.favourite__title {
+  text-align: center;
+}
+.favourite__wrap {
+  position: relative;
+}
+.favourite__inner-wrap {
+  transition: transform 0.5s ease-in-out;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.favourite__list {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  gap: 40px;
+  transition: transform 0.5s ease-in-out;
+}
+.favourite__list_active {
+  transform: translateX(-530px);
+  transition: transform 0.5s ease-in-out;
+}
+.favourite__item {
+  width: 100%;
+  flex-shrink: 0;
+}
+.favourite__button {
+  position: absolute;
+  top: 51%;
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #665F55;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+@media (max-width: 580px) {
+  .favourite__button {
+    display: none;
+  }
+}
+@media (hover: hover) {
+  .favourite__button:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+.favourite__button_right {
+  right: 0;
+}
+.bar {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.bar__position {
+  width: 40px;
+  height: 4px;
+  background-color: #C1B6AD;
+}
+.bar__button {
+  box-sizing: content-box;
+  width: 0;
+  height: 4px;
+  background-color: #665F55;
+}
+.bar__button_active {
+  animation: barAnimation 3s ease-in-out;
+}
+@keyframes barAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 40px;
+  }
+}
+.favour-card {
+  transition: transform 1s ease-in-out;
+}
+.favour-card__img {
+  margin-bottom: 18px;
+}
+.favour-card__content {
+  text-align: center;
+}
+.favour-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.favour-card__descript {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.favour-card__price {
+  font-size: 24px;
+  font-weight: 600;
+}
+.about {
+  margin-bottom: 100px;
+  scroll-margin: 20px;
+}
+.about__title {
+  margin-bottom: 40px;
+}
+.about__img-wrap {
+  display: flex;
+  column-gap: 40px;
+}
+@media (max-width: 1024px) {
+  .about__img-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+.about__column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 660px;
+  max-height: 1060px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+@media (max-width: 800px) {
+  .about__column {
+    width: 100%;
+  }
+}
+.about__item {
+  overflow: hidden;
+  border-radius: 20px;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease-in-out;
+}
+@media (hover: hover) {
+  .about__item:hover {
+    background-size: 100%;
+    transition: background-size 0.5s ease-in-out;
+  }
+}
+@media (max-width: 800px) {
+  .about__item {
+    background-size: 105%;
+  }
+}
+@media (max-width: 800px) and (hover: hover) {
+  .about__item:hover {
+    background-size: 100%;
+  }
+}
+@media (max-width: 760px) {
+  .about__item {
+    background-size: 120%;
+  }
+}
+@media (max-width: 580px) {
+  .about__item {
+    background-size: 150%;
+  }
+}
+@media (max-width: 580px) and (hover: hover) {
+  .about__item:hover {
+    background-size: 140%;
+  }
+}
+@media (max-width: 420px) {
+  .about__item {
+    background-size: 209%;
+  }
+}
+@media (max-width: 420px) and (hover: hover) {
+  .about__item:hover {
+    background-size: 199%;
+  }
+}
+.about__item_1 {
+  background-image: url(https://rednata.github.io/coffee-house/img/about-1.jpg);
+  background-position: center;
+  height: 43vw;
+}
+@media (max-width: 1024px) {
+  .about__item_1 {
+    height: 590px;
+  }
+}
+.about__item_2 {
+  background-image: url(https://rednata.github.io/coffee-house/img/about-2.jpg);
+  background-position: 45%;
+  height: 31vw;
+}
+@media (max-width: 1024px) {
+  .about__item_2 {
+    display: none;
+  }
+}
+.about__item_3 {
+  background-image: url(https://rednata.github.io/coffee-house/img/about-3.jpg);
+  background-position: 45%;
+  height: 31vw;
+}
+@media (max-width: 1024px) {
+  .about__item_3 {
+    display: none;
+  }
+}
+.about__item_4 {
+  background-image: url(https://rednata.github.io/coffee-house/img/about-4.jpg);
+  background-position: center;
+  height: 43vw;
+}
+@media (max-width: 1024px) {
+  .about__item_4 {
+    height: 590px;
+  }
+}
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 100px;
+  margin-bottom: 100px;
+  scroll-margin: 20px;
+}
+@media (max-width: 1024px) {
+  .app {
+    flex-direction: column;
+  }
+}
+@media (max-width: 580px) {
+  .app {
+    gap: 40px;
+  }
+}
+.app__content {
+  width: calc(50% - 70px);
+}
+@media (max-width: 1024px) {
+  .app__content {
+    width: 100%;
+  }
+}
+.app__title {
+  margin-bottom: 40px;
+}
+.app__text {
+  margin-bottom: 40px;
+}
+.app__button-wrap {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 580px) {
+  .app__button-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.app__btn {
+  border: 1px solid #665F55;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 20px;
+}
+.app__btn-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  text-align: left;
+  gap: 5px;
+}
+.app__btn-title {
+  font-size: 16px;
+}
+.app__img-content {
+  width: 630px;
+}
+@media (max-width: 1024px) {
+  .app__img-content {
+    width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  .app__img-content {
+    width: 92%;
+  }
+}
+@media (max-width: 580px) {
+  .app__img-content {
+    width: 100%;
+  }
+}
+.menu {
+  margin-bottom: 100px;
+}
+@media (max-width: 800px) {
+  .menu {
+    margin-bottom: 100px;
+  }
+}
+.menu__header {
+  margin-bottom: 20px;
+}
+.menu__nav-menu > .nav__link {
+  cursor: default;
+}
+.menu__nav-menu:after {
+  transform: scale(1);
+}
+.menu__title {
+  max-width: 60%;
+  margin: 0 auto;
+  margin-bottom: 38px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .menu__title {
+    max-width: 78%;
+  }
+}
+@media (max-width: 800px) {
+  .menu__title {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.menu__btn-wrap {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 39px;
+}
+@media (max-width: 580px) {
+  .menu__btn-wrap {
+    gap: 8px;
+  }
+}
+.menu__button_coffee:before {
+  background-image: url("https://rednata.github.io/coffee-house/img/coffeeIcon.png");
+}
+.menu__button_tea:before {
+  background-image: url("https://rednata.github.io/coffee-house/img/teaIcon.png");
+}
+.menu__button_dessert:before {
+  background-image: url("https://rednata.github.io/coffee-house/img/dessertIcon.png");
+}
+.menu__button_active {
+  background-color: #665F55;
+  color: #E1D4C9;
+  cursor: default;
+}
+.menu__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+@media (max-width: 800px) {
+  .menu__list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 720px) {
+  .menu__list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.menu__refresh {
+  visibility: hidden;
+}
+@media (max-width: 768px) {
+  .menu__refresh {
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #665F55;
+    margin: 0 auto;
+    margin-top: 40px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .menu__refresh_hidden {
+    visibility: hidden;
+  }
+}
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  width: 301px;
+  min-height: 506px;
+  border: 1px solid #C1B6AD;
+  border-radius: 40px;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .menu-card:hover .menu-card__img {
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+  }
+}
+.menu-card__img-wrap {
+  overflow: hidden;
+  border-radius: 40px;
+}
+.menu-card__img {
+  border-radius: 40px;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+.menu-card__content-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 19px;
+  padding-bottom: 16px;
+}
+.menu-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+.menu-card__text {
+  line-height: 24px;
+  flex-grow: 1;
+}
+.menu-card__price {
+  font-size: 24px;
+  font-weight: 600;
+}
+.menu-card_hidden {
+  display: none;
+}
+.footer {
+  margin-bottom: 40px;
+  width: 100%;
+  color: #E1D4C9;
+}
+.footer__container {
+  display: flex;
+  background-color: #665F55;
+  border-radius: 40px;
+  gap: 50px;
+  padding: 100px;
+  padding-top: 97px;
+}
+@media (max-width: 1400px) {
+  .footer__container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 1024px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+@media (max-width: 720px) {
+  .footer__container {
+    padding: 60px 16px;
+    gap: 40px;
+  }
+}
+.footer__title-social {
+  flex-basis: 50%;
+}
+@media (max-width: 1400px) {
+  .footer__title-social {
+    width: 90%;
+  }
+}
+@media (max-width: 580px) {
+  .footer__title-social {
+    width: 100%;
+  }
+}
+.footer__social-list {
+  display: flex;
+  gap: 12px;
+}
+.footer__social-link {
+  border: 1px solid #C1B6AD;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.footer__social-link:hover {
+  background-color: #E1D4C9;
+  border-color: #E1D4C9;
+  color: #403F3D;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__contacts-title {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__contacts-link {
+  display: flex;
+  width: max-content;
+  gap: 8px;
+}
+.footer__contacts-link::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.footer__contacts-link_pin {
+  position: relative;
+}
+.footer__contacts-link_pin::before {
+  background-image: url("https://rednata.github.io/coffee-house/img/pin-alt.svg");
+}
+.footer__contacts-link_phone {
+  position: relative;
+}
+.footer__contacts-link_phone::before {
+  background-image: url("https://rednata.github.io/coffee-house/img/phone.svg");
+}
+.footer__contacts-link_pin:after, .footer__contacts-link_phone:after {
+  position: absolute;
+  bottom: -4px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #E1D4C9;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+@media (hover: hover) {
+  .footer__contacts-link_pin:hover:after, .footer__contacts-link_phone:hover:after {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.footer__contacts-link_clock::before {
+  background-image: url("https://rednata.github.io/coffee-house/img/clock.svg");
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+.modal_hidden {
+  display: none;
+}
+.modal__container {
+  padding: 40px;
+}
+.modal__overlay {
+  height: 100%;
+  background-color: rgba(64, 63, 61, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__wrap {
+  display: flex;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 40px;
+  background-color: #E1D4C9;
+}
+@media (max-width: 768px) {
+  .modal__wrap {
+    gap: 16px;
+    padding: 15px;
+  }
+}
+@media (max-width: 720px) {
+  .modal__wrap {
+    flex-direction: column;
+  }
+}
+.modal__img {
+  border-radius: 40px;
+  align-self: flex-start;
+  width: 310px;
+}
+@media (max-width: 1024px) {
+  .modal__img {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 720px) {
+  .modal__img {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 580px) {
+  .modal__img {
+    display: none;
+  }
+}
+.modal__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+.modal__descript {
+  margin-bottom: 20px;
+}
+.modal__btn-wrap-title {
+  margin-bottom: 8px;
+}
+.modal__list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.modal__total-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.modal__note {
+  display: flex;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  border-top: 1px solid #C1B6AD;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+.modal__note:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url("https://rednata.github.io/coffee-house/img/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.modal__btn-close {
+  width: 100%;
+  height: 44px;
+  min-height: 0;
+  border: 1px solid #665F55;
+}
+.form__fieldset {
+  border: none;
+}
+.form__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #C1B6AD;
+  padding: 8px 16px 8px 8px;
+  font-weight: 600;
+  color: #403F3D;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.form__label_active {
+  background-color: #665F55;
+  color: #E1D4C9;
+  cursor: default;
+}
+@media (max-width: 370px) {
+  .form__label {
+    padding: 6px;
+  }
+}
+@media (hover: hover) {
+  .form__label:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+}
+.form__input {
+  appearance: none;
+}
+.form__input:before {
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #C1B6AD;
+  border-radius: 50%;
+  background-position: center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  padding: 7px;
+}
+.form__input_S:before {
+  content: "1";
+  color: #403F3D;
+  line-height: 1;
+}
+.form__input_S:before:hover {
+  color: #403F3D;
+}
+.form__input_M:before {
+  content: "2";
+  color: #403F3D;
+  line-height: 1;
+}
+.form__input_M:before:hover {
+  color: #403F3D;
+}
+.form__input_L:before {
+  content: "3";
+  color: #403F3D;
+  line-height: 1;
+}
+.form__input_L:before:hover {
+  color: #403F3D;
+}
