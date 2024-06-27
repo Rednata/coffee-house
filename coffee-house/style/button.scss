@@ -1,0 +1,18 @@
+.button {
+  min-width: 200px;
+  min-height: 64px;
+  background-color: $back-body;
+  border-radius: 100px;
+  color: $text-dark;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  @include hover {
+    &:hover {
+      background-color: $back-container;
+      color: $text-light;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+  }
+
+}

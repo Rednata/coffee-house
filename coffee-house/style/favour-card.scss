@@ -1,0 +1,29 @@
+.favour-card {
+  transition: transform 1s ease-in-out;
+
+  &__img {
+    margin-bottom: 18px;
+  }
+
+  &__content {
+    text-align: center;
+    // margin-bottom: 36px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__descript {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  &__price {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+}

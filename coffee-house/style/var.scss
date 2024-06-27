@@ -1,0 +1,80 @@
+$text-dark: #403F3D;
+$text-light: #E1D4C9;
+$text-accent: #B0907A;
+
+$back-body: #E1D4C9;
+$back-container: #665F55;
+$back-backdrop: rgba(64, 63, 61, 0.80);
+
+$border-light: #C1B6AD;
+$border-dark: #665F55;
+
+@mixin beforeInput($content: '') {  
+  content: $content;
+  color: $text-dark;
+  line-height: 1;
+
+  &:hover {
+    color: $text-dark
+  }  
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    @content
+  }
+}
+
+@mixin desktop1400 {
+  @media(max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin tablet1024 {
+  @media(max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet800 {
+  @media(max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin burger768 {
+  @media(max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet720 {
+  @media(max-width: 720px) {
+    @content;
+  }
+}
+
+@mixin tablet760 {
+  @media(max-width: 760px) {
+    @content;
+  }
+}
+
+@mixin mobile580 {
+  @media(max-width: 580px) {
+    @content;
+  }
+}
+
+@mixin mobile420 {
+  @media(max-width: 420px) {
+    @content;
+  }
+}
+
+@mixin mobile370 {
+  @media(max-width: 370px) {
+    @content;
+  }
+}

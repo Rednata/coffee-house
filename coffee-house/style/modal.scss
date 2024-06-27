@@ -1,0 +1,189 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100; 
+  
+  &_hidden {
+    display: none;
+  }
+  &__container {
+    padding: 40px;
+  }
+  &__overlay {
+    height: 100%;    
+    background-color: $back-backdrop;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+  }
+
+  &__wrap {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 40px;
+    background-color: $back-body;
+
+    @include burger768 {
+      gap: 16px;
+      padding: 15px;
+    }
+    @include tablet720 {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    border-radius: 40px;
+    align-self: flex-start;
+    width: 310px;
+
+    @include tablet1024 {
+      flex-shrink: 0;
+    }
+    @include tablet720 {
+      margin: 0 auto;
+    }
+
+    @include mobile580 {
+      display: none;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__title {
+    font-size: 24px;    
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 12px;
+  }
+
+  &__descript {
+    margin-bottom: 20px;
+  }
+
+  &__btn-wrap {
+
+  }
+
+  &__btn-wrap-title {
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+  }
+
+  &__total-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;    
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+
+  &__note {    
+    display: flex;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 600;
+    border-top: 1px solid $border-light;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;        
+
+    &:before {            
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-image: url("/img/info.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__btn-close {
+    width: 100%;
+    height: 44px;
+    min-height: 0;
+    border: 1px solid $border-dark;
+  }
+}
+
+.form {
+
+  &__fieldset {
+    border: none;
+  }
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 100px;
+    border: 1px solid $border-light;
+    padding: 8px 16px 8px 8px;
+    font-weight: 600;
+    color: $text-dark;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &_active {
+      background-color: $back-container;
+      color: $text-light;
+      cursor: default;
+    } 
+    
+    @include mobile370 {
+      padding: 6px;
+    }
+    @include hover {
+      &:hover {
+        background-color: $back-container;
+        color: $text-light;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+    }  
+    
+  }
+}
+
+.form__input {
+  appearance: none;
+
+  &:before {
+    // content: '';
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: $border-light;
+    border-radius: 50%;
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    padding: 7px;   
+  }
+
+  &_S:before {
+    @include beforeInput('1')
+  }
+  &_M:before {
+    @include beforeInput('2')
+  }
+  &_L:before {
+    @include beforeInput('3')
+  }
+}

@@ -1,0 +1,146 @@
+.menu {
+  margin-bottom: 100px;
+
+  @include tablet800 {
+    margin-bottom: 100px;
+  }
+
+  &__header {    
+    margin-bottom: 20px;    
+  }
+
+  &__nav-menu>.nav__link {
+    cursor: default;    
+    
+  }
+
+  &__nav-menu:after {
+    transform: scale(1);
+  }
+
+  &__title {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 38px;
+    text-align: center;
+
+    @include tablet1024 {
+      max-width: 78%;
+    }
+    @include tablet800 {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__btn-wrap {
+    display: flex;
+    gap: 16px;
+    justify-content: center;    
+    margin-bottom: 39px;
+    
+    @include mobile580 {
+      gap: 8px;
+    }
+  }
+
+  &__button {    
+    &_coffee:before {
+      background-image: url("/img/coffeeIcon.png");
+    }
+    &_tea:before {
+      background-image: url("/img/teaIcon.png");
+    }
+    &_dessert:before {
+      background-image: url("/img/dessertIcon.png");
+    }
+
+    &_active {
+      background-color: $back-container;
+      color: $text-light;
+      cursor: default;
+    }    
+
+    &:hover {
+      // background-color: $back-container;
+      // color: $text-light;
+      // transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    // max-height: 1052px;
+    // overflow: hidden;
+    // @include desktop1400 {
+    //   gap: 30px;
+    // }
+
+    @include tablet800 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include tablet720 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include burger768 {
+      // max-height: 2144px;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__refresh {
+    visibility: hidden;
+
+    @include burger768 {
+      visibility: visible;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border: 1px solid $border-dark;     
+      margin: 0 auto;
+      margin-top: 40px;   
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      &_hidden {
+        visibility: hidden;
+      }
+
+      &_show {
+        // display: flex;
+      }
+    }
+    
+
+
+
+    // &_show{    
+    //   @include hover {
+    //     &:hover {
+    //       background-color: $back-container;
+    //       color: $text-light;
+    //       transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    //     }
+    //   }
+      
+      // @include tablet1024 {
+      //   display: flex;
+      
+      // }
+    // }
+  }
+}
+
+
